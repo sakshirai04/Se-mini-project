@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" href="style.css" type="text/css" /><style type="text/css">._css3m{display:none}</style>
+    <script src="includes/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <style>
+    .tabular
+    {
+    	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+  
+
+    	}
+    	.ATMtabular
+    {
+    	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+  background-image:url(images/ATM.jpg); 
+  height:300;
+
+    	}
+    	.intabular
+    {
+    	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+   background-color:White;
+    }
+    .sidebar
+    {
+    	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+  background-color:White;
+    }
+    </style>
+    
+</head>
+<body style="background-image:url(images/FoodBackground.jpg);">
+    
+    <form id="form1" runat="server">
+    
+    <div>
+    <center>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+    <table class="tabular" width="80%">
+    
+    <tr>
+    <td colspan="2">
+        <img src="images/Banner.jpg" width="100%" class="intabular"/>
+    </td>
+    </tr>
+    
+    <tr>
+    <td colspan="2">
+    <asp:Panel ID="Panel1" runat="server">
+       
+    <ul id="css3menu1" class="topmenu">
+         <li class="topmenu"><a href="Registration.aspx" style="height:16px;line-height:16px;">Add Customer</a></li>
+    <li class="topfirst"><a href="#" style="height:19px;line-height:19px;"><span>Add Details</span></a>
+	<ul>
+    <li class="subfirst"><a href="AddInventory.aspx">Inventory Details</a></li>
+		<li><a href="AddFoodItem.aspx">Add Food</a></li>
+		<li><a href="AddOffers.aspx">Add Offers</a></li>
+		
+	</ul></li>
+
+	    <li class="topmenu"><a href="RemoveFoodItem.aspx" style="height:16px;line-height:16px;">Remove Food</a></li>
+
+                                  <li class="topmenu"><a href="UpdateInventory.aspx" style="height:16px;line-height:16px;">Update Inventory Details</a></li>
+	    <li class="topmenu"><a href="TakeOrder.aspx" style="height:16px;line-height:16px;">Take Order</a></li>
+          <li class="topmenu"><a href="PredictionBasedHours.aspx" style="height:16px;line-height:16px;">Order Forecasting</a></li>
+          <li class="topfirst"><a href="#" style="height:19px;line-height:19px;"><span>Report</span></a>
+	<ul>
+		<li class="subfirst"><a href="SalesBasedOnDate.aspx">Sales As Per Date</a></li>
+		<li><a href="FoodItemSales.aspx">Sales As Per Item</a></li>
+		<li><a href="TotalEarnings.aspx">Total Earnings</a></li>
+	</ul></li>
+     
+   
+          
+	    <li class="toplast"><a href="Logout.aspx" style="height:16px;line-height:16px;">Logout</a></li>
+    </ul>
+    </asp:Panel>
+       <asp:Panel ID="Panel2" runat="server">
+       
+    <ul id="css3menu1" class="topmenu">
+	    <li class="topfirst"><a href="OrderPlacedCustomer.aspx" style="height:16px;line-height:16px;">Customer Order Details</a></li>
+	    <li class="topmenu"><a href="SComboOffers.aspx" style="height:16px;line-height:16px;">Offer Details</a></li>
+	    <li class="topmenu"><a href="PredictionBasedHours.aspx" style="height:16px;line-height:16px;">Order Forecasting</a></li>
+                 
+	    <li class="toplast"><a href="Logout.aspx" style="height:16px;line-height:16px;">Logout</a></li>
+    </ul>
+    </asp:Panel>
+     
+     <asp:Panel ID="Panel4" runat="server">
+       
+    <ul id="css3menu1" class="topmenu">
+	    <li class="topfirst"><a href="Home.aspx" style="height:16px;line-height:16px;">Home</a></li>
+	    <li class="topmenu"><a href="AboutUs.aspx" style="height:16px;line-height:16px;">About Us</a></li>
+	    <li class="topmenu"><a href="ContactUs.aspx" style="height:16px;line-height:16px;">Contact Us</a></li>
+                 
+	    <li class="toplast"><a href="MainLogin.aspx" style="height:16px;line-height:16px;">Log In</a></li>
+    </ul>
+    </asp:Panel>
+    </td>
+    </tr>
+    
+    <tr>
+    <td colspan="2" class="intabular"> <center><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </center>
+        </td>
+    </tr>
+    
+    <tr>
+    <td colspan="2">
+       
+        </td>
+        </tr>
+        
+        <tr>
+        <td colspan="2"></td>
+        </tr>
+    <tr>
+    <td colspan="2" 
+            style="background-color: #8A0000; color: #FFFFFF; font-family: Candara;" align="right" 
+            class="intabular">
+        Canteen Automated System</td>
+    </tr>
+        </table>
+    </center>
+    </div>
+    
+    </form>
+    
+</body>
+</html>
